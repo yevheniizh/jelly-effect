@@ -9,8 +9,8 @@ export default class Ball {
     this.vy = 0;
     this.radius = radius || 2;
     this.color = color || "#ff6600";
-    this.friction = 0.9;
-    this.springFactor = 0.01;
+    this.friction = 0.6;
+    this.springFactor = 0.1;
   }
 
   setPos(x, y) {
