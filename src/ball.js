@@ -5,7 +5,8 @@ export default class Ball {
     this.vx = 0;
     this.vy = 0;
     this.radius = radius || 2;
-    this.color = color || " ";
+    this.color = color || "#ff6600";
+    this.friction = "0.9";
   }
 
   setPos(x, y) {
@@ -18,6 +19,8 @@ export default class Ball {
     let dy = this.y - mouse.y;
 
     let dist = Math.sqrt(dx * dx + dy * dy);
+
+    // interaction
     if (dist < 30) {
       const angle = Math.atan2(dy, dx);
       let tx = mouse.x + Math.cos(angle) * 30;
@@ -26,7 +29,12 @@ export default class Ball {
       this.vx += tx - this.x;
       this.vy += ty - this.y;
     }
-    console.log(dist);
+
+    // friction
+    this.vx *= this.friction;
+    this.vy *= this.friction;
+
+    // actual move
     this.x += this.vx;
     this.y += this.vy;
   }
