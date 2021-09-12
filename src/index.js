@@ -19,6 +19,7 @@ function Render() {
   mouse.draw(ctx);
 
   balls.forEach((ball) => {
+    ball.think(pos);
     ball.draw(ctx);
   });
 }
