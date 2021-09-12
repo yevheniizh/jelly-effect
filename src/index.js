@@ -8,7 +8,7 @@ let pos = new Mouse(canvas);
 const balls = [];
 const mouse = new Ball(0, 0, 30, "green");
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 600; i++) {
   balls.push(new Ball(Math.random() * 600, Math.random() * 600));
 }
 
