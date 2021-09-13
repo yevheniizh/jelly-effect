@@ -1,8 +1,4 @@
-# empty-project
-
-Empty project.
-
-## Building and running on localhost
+## Running on localhost
 
 First install dependencies:
 
@@ -10,24 +6,8 @@ First install dependencies:
 npm install
 ```
 
-To create a production build:
-
-```sh
-npm run build-prod
-```
-
-To create a development build:
-
-```sh
-npm run build-dev
-```
-
 ## Running
 
 ```sh
-node dist/bundle.js
+npm run start
 ```
-
-## Credits
-
-Made with [createapp.dev](https://createapp.dev/)
